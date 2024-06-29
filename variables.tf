@@ -19,27 +19,27 @@ variable "vpc_id" {
 }
 
 variable "common_tags" {
-    type = map 
+  type = map
 }
 
 variable "sg_tags" {
-    type = map 
-    default = {}
+  type = map
+  default = {}
 }
 
 variable "outbound_rules" {
-    type = list 
-    default = [
-        {
-            from_port = 0
-            to_port = 0
-            protocol = "-1" # all protocols
-            cidr_blocks = ["0.0.0.0/0"]
-        }
-    ]
+  type = list
+  default = [
+    {
+        from_port = 0
+        to_port = 0
+        protocol = "-1" # all protocols
+        cidr_blocks = ["0.0.0.0/0"]
+    }
+  ]
 }
 
 variable "ingress_rules" {
-    type = list 
-    default = []
+  type = list
+  default = []
 }
